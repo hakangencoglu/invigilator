@@ -55,7 +55,7 @@ class quizaccess_invigilator extends quiz_access_rule_base
             'userid' => $USER->id
         ]);
         
-        if ($existing_attempts > 0) {
+        if ($existing_attempts > 3) {
             // User has attempted this quiz before, don't show preflight again
             return false;
         }
